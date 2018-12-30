@@ -8,6 +8,8 @@ def collatz(number):
 
 
 guess = int(input("Please enter a number: "))
+
+# the try and except below does not work
 try:
     while guess != 1:
         guess = collatz(guess)
