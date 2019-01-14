@@ -1,1 +1,1 @@
-@py.exe C:\Users\Joe\Documents\Projects\AutomateTheBoringStuffActivities\06_AdvancedStrings/pw.py %*
+C:\Users\Joe\AppData\Local\Programs\Python\Python36\python3.exe  C:\Users\Joe\Documents\Projects\AutomateTheBoringStuffActivities\06_AdvancedStrings/pw.py %*
