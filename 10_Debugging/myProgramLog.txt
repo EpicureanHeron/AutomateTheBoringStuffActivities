@@ -1,0 +1,9 @@
+2019-03-05 06:22:44,398 - DEBUG - Start of factorial(5)
+2019-03-05 06:22:44,400 - DEBUG - i is 0, total is 0
+2019-03-05 06:22:44,400 - DEBUG - i is 1, total is 0
+2019-03-05 06:22:44,400 - DEBUG - i is 2, total is 0
+2019-03-05 06:22:44,400 - DEBUG - i is 3, total is 0
+2019-03-05 06:22:44,400 - DEBUG - i is 4, total is 0
+2019-03-05 06:22:44,400 - DEBUG - i is 5, total is 0
+2019-03-05 06:22:44,400 - DEBUG - End of factorial(5)
+2019-03-05 06:22:44,400 - DEBUG - End of program
