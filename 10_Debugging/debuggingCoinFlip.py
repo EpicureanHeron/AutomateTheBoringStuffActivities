@@ -5,6 +5,10 @@ while guess not in ('heads', 'tails'):
     guess = input()
 
 toss = random.randint(0,1) # 0 is tails, 1 is heads
+if toss == 0:
+    toss = "tails"
+else:
+    toss = 'heads'
 
 if toss == guess:
     print('You got it!')
