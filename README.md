@@ -19,3 +19,7 @@ Cannot use command
 have to use the syntax
 `python3 -m pip install ...`
 
+or
+`pip3 install ...`
+
+
