@@ -20,7 +20,7 @@ emailElem.click()
 emailElem.send_keys('email@gmail.com')
 passwordElem = browser.find_element_by_class_name('js-password-field')
 passwordElem.click()
-passwordElem.send_keys('passwrd')
+passwordElem.send_keys('password')
 passwordElem.send_keys(Keys.ENTER)
 
 tweetElem = browser.find_element_by_id('global-new-tweet-button')
