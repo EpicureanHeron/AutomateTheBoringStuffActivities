@@ -17,6 +17,13 @@ for row in range(1, rowNumber+1):
     for column in range(1, sheet.max_column + 1):
         sheet2[openpyxl.utils.get_column_letter(column) + str(row)].value = sheet[openpyxl.utils.get_column_letter(column) + str(row)].value
 
+for row in range(rowNumber+1, rowNumber + 1 + blanksToInsert):
+    for column in range(1, sheet.max_column + 1):
+         sheet2[openpyxl.utils.get_column_letter(column) + str(row)].value = ''
+
+for row in range(rowNumber + 1 , sheet.max_row + 1):
+    for column in range(1, sheet.max_column + 1):
+        sheet2[openpyxl.utils.get_column_letter(column) + str(row + blanksToInsert)].value = sheet[openpyxl.utils.get_column_letter(column) + str(row)].value       
 
 wb2.save('copied.xlsx')
 # capture and save data from spreadsheet 
