@@ -24,7 +24,7 @@ def thirdExWritePDF():
     pdf2File = open('meetingminutes2.pdf', 'rb')
     pdf1Reader = PyPDF2.PdfFileReader(pdf1File)
     pdf2Reader = PyPDF2.PdfFileReader(pdf2File)
-    pdfWriter = PyPDF2.PdfFileWriter
+    pdfWriter = PyPDF2.PdfFileWriter()
 
     for pageNum in range(pdf1Reader.numPages):
         pageObj = pdf1Reader.getPage(pageNum)
