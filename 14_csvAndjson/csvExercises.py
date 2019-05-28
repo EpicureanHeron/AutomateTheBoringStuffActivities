@@ -26,6 +26,15 @@ def exercise2():
 
     outputFile.close()
 
-exercise2()
+#exercise2()
 
+def exercise3():
+    csvFile = open('example.tsv', 'w', newline='')
+
+    csvWriter = csv.writer(csvFile, delimiter='\t', lineterminator='\n\n')
+    csvWriter.writerow(['apples', 'oranges', 'grapes'])
+
+    csvWriter.writerow(['eggs', 'bacon', 'ham'])
+
+exercise3()
 
