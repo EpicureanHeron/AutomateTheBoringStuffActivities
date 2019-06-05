@@ -29,6 +29,7 @@ def exercise2():
 #exercise2()
 
 def exercise3():
+    #tsv is a tab sepverated 
     csvFile = open('example.tsv', 'w', newline='')
 
     csvWriter = csv.writer(csvFile, delimiter='\t', lineterminator='\n\n')
@@ -36,5 +37,5 @@ def exercise3():
 
     csvWriter.writerow(['eggs', 'bacon', 'ham'])
 
-exercise3()
+#exercise3()
 
