@@ -21,7 +21,7 @@ try:
         totalTime = round(time.time() - startTime, 2)
         print('Lap #%s: %s (%s)' % (lapNum, totalTime, lapTime), end='')
 
-        lapNum += 1
+        lapNum += 1 
         lastTime = time.time() #reset the last lap time
 except KeyboardInterrupt:
     #handle the Ctrl + c exception to its error message from displaying
