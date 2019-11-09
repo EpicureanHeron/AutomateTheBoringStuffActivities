@@ -22,7 +22,49 @@ def ex2():
 
 # crops a rectangle at the given passed coordinates
 def ex3():
-    catIm = Image.open('2019_07_29.jpg')
-    croppedIm = catIm.crop((335, 345, 565, 560))
-    croppedIm.save('cropped.png')
+    catIm = Image.open('Zophie.png')
+    croppedIm = catIm.crop((335, 370, 565, 550))
+    croppedIm.save('cropped2.png')
 
+
+# copies a cropped image of cat's face, then pastes it at specific coordinates, and then saves it. 
+def ex4():
+    catIm = Image.open('zophie.png')
+    catCopyIm = catIm.copy()
+
+    faceIm = catIm.crop((335, 345, 565, 560))
+    print(faceIm.size)
+
+    catCopyIm.paste(faceIm, (0, 0))
+    catCopyIm.paste(faceIm, (400, 500))
+    catCopyIm.save('pasted.png')
+
+def ex5():
+    catIm = Image.open('zophie.png')
+    #assigning two variables based on the return from catIm.size
+    catImWidth, catImHeight = catIm.size
+    faceIm = catIm.crop((335, 345, 565, 560))
+    faceImWidth, faceImHeight = faceIm.size
+    catCopyTwo = catIm.copy()
+
+    for left in range(0, catImWidth, faceImWidth):
+        for top in range(0, catImHeight, faceImHeight):
+            print(left, top)
+            catCopyTwo.paste(faceIm, (left, top))
+
+    catCopyTwo.save('tiled.png')
+
+# resizing images, stretching and shrinking
+def ex6():
+    catIm = Image.open('zophie.png')
+    width, height = catIm.size
+    quatersizedIm = catIm.resize((int(width/2), int(height/2)))
+    quatersizedIm.save('quarterportion.png')
+    svelteIm = catIm.resize((width, height + 300))
+    svelteIm.save('svelte.png')
+
+    thiccIm = catIm.resize((width + 600, height))
+    thiccIm.save('thicc.png')
+
+
+ex6()
