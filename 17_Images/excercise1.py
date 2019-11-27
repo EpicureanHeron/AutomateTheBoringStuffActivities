@@ -55,6 +55,8 @@ def ex5():
     catCopyTwo.save('tiled.png')
 
 # resizing images, stretching and shrinking
+
+
 def ex6():
     catIm = Image.open('zophie.png')
     width, height = catIm.size
@@ -67,8 +69,6 @@ def ex6():
     thiccIm.save('thicc.png')
 
 
-
-
 def ex7():
     catIm = Image.open('zophie.png')
     # catIm.rotate(90).save('rotated90.png')
@@ -78,4 +78,24 @@ def ex7():
     catIm.transpose(Image.FLIP_LEFT_RIGHT).save('horizontal_flip.png')
     catIm.transpose(Image.FLIP_TOP_BOTTOM).save('vertical_flip.png')
 
-ex7()
+
+def ex8():
+
+    im = Image.new('RGBA', (100, 100))
+
+    im.getpixel((0,0))
+
+    for x in range(100):
+        for y in range(50):
+            im.putpixel((x, y), (210, 210, 210))
+
+    from PIL import ImageColor
+    for x in range(100):
+        for y in range(50, 100):
+            im.putpixel((x, y), ImageColor.getcolor('darkgray', 'RGBA'))
+        
+
+    im.save('putPixel.png')
+
+
+ex8()
